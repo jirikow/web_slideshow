@@ -1,0 +1,79 @@
+/* */
+body {
+    margin: 0;
+    padding: 0;
+    background: #18293b;
+}
+
+.slider {
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); /* vyrovná fotky na střed */
+}
+
+.navigation {
+    position: absolute;
+    left: 50%; /* dostaneme na střed ale začíná prvním okénkem*/
+    transform: translateX(-50%); /* posune menu o 50% po ose X*/
+    bottom: 20px;
+    display: flex;
+}
+
+.bar {
+    width: 70px;
+    height: 10px;
+    border: 2px solid white;
+    margin: 5px;
+    cursor: pointer; /* změní kurzor při najetí */
+}
+
+.bar:hover {
+    background: #fff;
+}
+
+input[name="r"]{
+    display: none;
+}
+
+.slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    width: 20%;
+    transition: 1s; /* rychlost přesunu fotek*/
+}
+
+#menu1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#menu2:checked ~ .s1 {
+    margin-left: -20%;
+}
+
+#menu3:checked ~ .s1 {
+    margin-left: -40%;
+}
+
+#menu4:checked ~ .s1 {
+    margin-left: -60%;
+}
+
+#menu5:checked ~ .s1 {
+    margin-left: -80%;
+}
